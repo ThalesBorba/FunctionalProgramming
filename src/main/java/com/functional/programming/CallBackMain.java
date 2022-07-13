@@ -10,13 +10,9 @@ public class CallBackMain {
 
         System.out.println();
 
-        message2("João", " da Silva", message -> {
-            System.out.println(", e não tenho sobrenome");
-        });
+        message2("João", " da Silva", message -> System.out.println(", e não tenho sobrenome"));
 
-        message2("João", null, message -> {
-            System.out.println(", e não tenho sobrenome");
-        });
+        message2("João", null, message -> System.out.println(", e não tenho sobrenome"));
     }
 
     static void message(String name, Double grade, Runnable callback) {

@@ -11,8 +11,6 @@ import static com.functional.programming.enums.Gender.MALE;
 public class StreamMain {
     public static void main(String[] args) {
 
-        listFemaleStudents(students);
-
         System.out.println("Entre os estudantes, são mulheres: ");
         //listFemaleStudents(students);
         listFemaleStudentsStream(students);
@@ -22,6 +20,7 @@ public class StreamMain {
                 .stream()
                 .map(student -> student.getGrade())
                 .filter(grade -> grade >= 5.0)
+                .sorted()
                 .forEach(System.out::println);
     }
 

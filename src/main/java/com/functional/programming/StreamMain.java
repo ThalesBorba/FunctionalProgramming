@@ -2,6 +2,7 @@ package com.functional.programming;
 
 import com.functional.programming.models.Student;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -35,12 +36,12 @@ public class StreamMain {
     }
 
     static List<Student> students = List.of(
-            new Student("José", MALE, 7.5),
-            new Student("Maria", FEMALE, 9.5),
-            new Student("João", MALE, 5.8),
-            new Student("Michelle", FEMALE, 7.5),
-            new Student("Bianca", FEMALE, 3.2),
-            new Student("Paulo", MALE, 6.0)
+            new Student("José", MALE, 7.5, LocalDate.of(2015, 1,1)),
+            new Student("Maria", FEMALE, 9.5, LocalDate.of(2015, 1,1)),
+            new Student("João", MALE, 5.8, LocalDate.of(2015, 1,1)),
+            new Student("Michelle", FEMALE, 7.5, LocalDate.of(2015, 1,1)),
+            new Student("Bianca", FEMALE, 3.2, LocalDate.of(2015, 1,1)),
+            new Student("Paulo", MALE, 6.0, LocalDate.of(2015, 1,1))
     );
 
     static void listFemaleStudents(List<Student> students) {

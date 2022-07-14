@@ -2,6 +2,7 @@ package com.functional.programming;
 
 import com.functional.programming.models.Student;
 
+import java.time.LocalDate;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -16,7 +17,7 @@ public class ConsumerMain {
         greetStudentConsumer3.accept(fabio, 8.0);
     }
 
-    static Student fabio = new Student("Fabio", MALE, 8.0);
+    static Student fabio = new Student("Fabio", MALE, 8.0, LocalDate.of(2003, 7, 15));
 
 
 

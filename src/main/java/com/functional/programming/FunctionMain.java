@@ -8,16 +8,12 @@ import java.util.function.Function;
 public class FunctionMain {
     public static void main(String[] args) {
 
-        System.out.println("PA de n + 2: ");
-        oneToTen.stream().map(addTwo).forEach(System.out::println);
+        System.out.println(addTwo.apply(7));
 
-        System.out.println("\nPA de (n + 2) * 10: ");
-        oneToTen.stream().map(addTwo).map(multiplyByTen).forEach(System.out::println);
+        System.out.println(addTwo.andThen(multiplyByTen).apply(5));
 
         System.out.println("\n" + multiplyAndConvert.apply("O resultado de 4 * 10 é: ", 4));
     }
-
-    static List<Integer> oneToTen = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
     static Function<Integer, Integer> addTwo = number -> number + 2;
 
